@@ -1,0 +1,75 @@
+nº;id;título;tema;medidas;origem;preço (R$)
+1;072;Passeio a cavalo;figuras;~45 × 35 cm;estimado;1150
+2;073;Veleiros;paisagens;~33 × 45 cm;estimado;810
+3;074;Serra com pinheiros;paisagens;~45 × 33 cm;estimado;830
+4;075;Rancho na serra;paisagens;~45 × 36 cm;estimado;890
+5;076;Casa na montanha;paisagens;~45 × 32 cm;estimado;790
+6;077;Lago ao entardecer;paisagens;~45 × 35 cm;estimado;850
+7;078;Casinha com ipês;paisagens;~45 × 35 cm;estimado;870
+8;079;Lago e montanha;paisagens;~45 × 33 cm;estimado;820
+9;080;Crânio com rosa;natureza-morta;40 × 30 cm;medida;660
+10;081;Cogumelos;flores;57 × 37 cm;medida;1300
+11;082;Coelhos;animais;~45 × 26 cm;estimado;840
+12;083;Veleiros no lago;paisagens;~45 × 24 cm;estimado;610
+13;084;Vila toscana;paisagens;~37 × 45 cm;estimado;920
+14;085;Crianças na fonte;figuras;~45 × 45 cm;acervo;
+15;086;Araras Canindé;animais;83 × 63 cm;medida;3750
+16;087;Hibisco;flores;~45 × 30 cm;estimado;740
+17;088;Vaso com tulipas;flores;43 × 63 cm;medida;1500
+18;089;Luz dourada;paisagens;42 × 52 cm;medida;1200
+19;090;Rei das Selvas;animais;42 × 42 cm;medida;1250
+20;091;Lago alpino;paisagens;~35 × 45 cm;estimado;870
+21;092;Sol sobre o lago;paisagens;~45 × 45 cm;estimado;1100
+22;093;Rosa vermelha;flores;43 × 43 cm;medida;1000
+23;094;Pera;natureza-morta;~45 × 44 cm;estimado;1100
+24;095;Carpas;animais;~34 × 45 cm;estimado;1100
+25;096;Galinha e pintinhos;animais;~45 × 34 cm;estimado;1100
+26;097;Borboleta;animais;~45 × 30 cm;estimado;970
+27;098;Vaca no pasto;animais;~45 × 33 cm;estimado;1050
+28;099;Patinhos;animais;~45 × 33 cm;estimado;1050
+29;100;Zínias;flores;~29 × 45 cm;estimado;730
+30;101;Abóbora e leiteira;natureza-morta;~45 × 37 cm;estimado;910
+31;102;Labrador;animais;29 × 36 cm;medida;900
+32;103;Toscana;paisagens;45 × 31 cm;medida;770
+33;104;Barco ao pôr do sol;paisagens;42 × 32 cm;medida;740
+34;105;Allamanda;flores;42 × 32 cm;medida;890
+35;106;Caminho das hortênsias;paisagens;~45 × 36 cm;estimado;890
+36;107;Jarra com uvas;natureza-morta;32 × 26 cm;medida;500
+37;108;Barco de pesca;paisagens;~45 × 36 cm;estimado;880
+38;109;Seixos;paisagens;32 × 22 cm;medida;500
+39;110;Gavião-real;animais;~29 × 45 cm;estimado;940
+40;111;Pasto com ipês;paisagens;~36 × 45 cm;estimado;900
+41;112;Paineira vermelha;flores;84 × 34 cm;medida;1550
+42;113;Antúrio e abelha;flores;~45 × 30 cm;estimado;740
+43;114;Suculentas;flores;63 × 43 cm;medida;1500
+44;115;Buquê de rosas;flores;34 × 58 cm;medida;1100
+45;116;Vale;paisagens;~45 × 23 cm;estimado;580
+46;117;Retrato de homem;figuras;~35 × 45 cm;estudo;
+47;118;Menina;figuras;~34 × 45 cm;estudo;
+48;119;Reflexos;paisagens;35 × 45 cm;medida;1000
+49;120;Borboleta nas flores;animais;~30 × 45 cm;estimado;950
+50;121;Patos no píer;animais;~45 × 26 cm;estimado;850
+51;122;Abóbora;flores;~45 × 45 cm;estimado;1100
+52;123;Orquídeas;flores;~45 × 45 cm;estimado;1100
+53;124;Mini margarida;flores;32 × 32 cm;medida;560
+54;125;Gato;animais;~45 × 44 cm;estimado;1450
+55;126;Abóbora e limões;natureza-morta;63 × 23 cm;medida;800
+56;127;Chaleira de cobre;natureza-morta;~45 × 34 cm;estimado;830
+57;128;Lírios amarelos;flores;~45 × 45 cm;estimado;1100
+58;129;Cajus;flores;~31 × 45 cm;estimado;770
+59;130;Lágrima de Cristo;flores;33 × 33 cm;medida;750
+60;131;Estudo da anatomia feminina;desenhos;33 × 23 cm;medida;300
+61;132;Gorila;desenhos;34 × 23 cm;medida;300
+62;133;Natureza-morta I;desenhos;45 × 32 cm;medida;430
+63;134;Natureza-morta II;desenhos;45 × 32 cm;medida;430
+64;135;O Bailarino;desenhos;38 × 28 cm;medida;410
+65;136;Moça com véu;desenhos;45 × 32 cm;medida;560
+66;137;Moça dormindo;desenhos;34 × 23 cm;medida;300
+67;138;Retrato feminino a carvão;desenhos;41 × 31 cm;medida;500
+68;139;Retrato masculino a carvão;desenhos;34 × 23 cm;medida;300
+69;140;Retrato feminino em pastel;desenhos;34 × 23 cm;medida;300
+70;141;Retrato de índio em pastel;desenhos;45 × 32 cm;medida;560
+71;142;Retrato masculino;figuras;34 × 23 cm;medida;560
+72;143;Pinguim;animais;27 × 33 cm;medida;640
+73;144;Queda d'água;paisagens;34 × 27 cm;medida;650
+74;145;Rio com pedras;paisagens;32 × 42 cm;vendido;

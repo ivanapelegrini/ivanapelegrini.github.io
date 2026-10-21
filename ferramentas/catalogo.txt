@@ -1,0 +1,78 @@
+# Catálogo usado na primeira geração do site (21/10/2026).
+# Formato: id|arquivo|titulo|tema
+# Temas: paisagens, flores, natureza-morta, animais, figuras
+072|072-passeio-a-cavalo|Passeio a cavalo|figuras
+073|073-veleiros|Veleiros|paisagens
+074|074-serra-com-pinheiros|Serra com pinheiros|paisagens
+075|075-rancho-na-serra|Rancho na serra|paisagens
+076|076-casa-na-montanha|Casa na montanha|paisagens
+077|077-lago-ao-entardecer|Lago ao entardecer|paisagens
+078|078-casinha-com-ipes|Casinha com ipês|paisagens
+079|079-lago-e-montanha|Lago e montanha|paisagens
+080|080-caveira-e-rosa|Caveira e rosa|natureza-morta
+081|081-cogumelos|Cogumelos|flores
+082|082-coelhos|Coelhos|animais
+083|083-veleiros-no-lago|Veleiros no lago|paisagens
+084|084-vila-toscana|Vila toscana|paisagens
+085|085-criancas-na-fonte|Crianças na fonte|figuras
+086|086-araras|Araras|animais
+087|087-hibisco|Hibisco|flores
+088|088-tulipas|Tulipas|flores
+089|089-caminho-florido|Caminho florido|paisagens
+090|090-leao|Leão|animais
+091|091-lago-alpino|Lago alpino|paisagens
+092|092-sol-sobre-o-lago|Sol sobre o lago|paisagens
+093|093-rosa-vermelha|Rosa vermelha|flores
+094|094-pera|Pera|natureza-morta
+095|095-carpas|Carpas|animais
+096|096-galinha-e-pintinhos|Galinha e pintinhos|animais
+097|097-borboleta|Borboleta|animais
+098|098-vaca-no-pasto|Vaca no pasto|animais
+099|099-patinhos|Patinhos|animais
+100|100-zinias|Zínias|flores
+101|101-abobora-e-leiteira|Abóbora e leiteira|natureza-morta
+102|102-cachorro|Cachorro|animais
+103|103-colinas-da-toscana|Colinas da Toscana|paisagens
+104|104-barco-ao-entardecer|Barco ao entardecer|paisagens
+105|105-flor-rosada|Flor rosada|flores
+106|106-caminho-das-hortensias|Caminho das hortênsias|paisagens
+107|107-bule-de-prata-e-uvas|Bule de prata e uvas|natureza-morta
+108|108-barco-de-pesca|Barco de pesca|paisagens
+109|109-caminho-de-pedras|Caminho de pedras|paisagens
+110|110-gaviao-real|Gavião-real|animais
+111|111-pasto-com-ipes|Pasto com ipês|paisagens
+112|112-flores-da-paineira|Flores da paineira|flores
+113|113-anturio-e-abelha|Antúrio e abelha|flores
+114|114-suculentas|Suculentas|flores
+115|115-roseira|Roseira|flores
+116|116-vale|Vale|paisagens
+117|117-retrato-de-homem|Retrato de homem|figuras
+118|118-menina|Menina|figuras
+119|119-rio-na-mata|Rio na mata|paisagens
+120|120-borboleta-nas-flores|Borboleta nas flores|animais
+121|121-patos-no-pier|Patos no píer|animais
+122|122-abobora|Abóbora|flores
+123|123-orquideas|Orquídeas|flores
+124|124-dalia-branca|Dália branca|flores
+125|125-gato|Gato|animais
+126|126-abobora-e-limoes|Abóbora e limões|natureza-morta
+127|127-chaleira-de-cobre|Chaleira de cobre|natureza-morta
+128|128-lirios-amarelos|Lírios amarelos|flores
+129|129-cajus|Cajus|flores
+130|130-lagrima-de-cristo|Lágrima-de-cristo|flores
+# Acrescentadas em 21/10/2026 a partir da loja WordPress (imagens da loja):
+131|131-estudo-da-anatomia-feminina|Estudo da anatomia feminina|desenhos
+132|132-gorila|Gorila|desenhos
+133|133-natureza-morta-i|Natureza-morta I|desenhos
+134|134-natureza-morta-ii|Natureza-morta II|desenhos
+135|135-o-bailarino|O Bailarino|desenhos
+136|136-moca-com-veu|Moça com véu|desenhos
+137|137-moca-dormindo|Moça dormindo|desenhos
+138|138-retrato-feminino-a-carvao|Retrato feminino a carvão|desenhos
+139|139-retrato-masculino-a-carvao|Retrato masculino a carvão|desenhos
+140|140-retrato-feminino-em-pastel|Retrato feminino em pastel|desenhos
+141|141-retrato-de-indio-em-pastel|Retrato de índio em pastel|desenhos
+142|142-retrato-masculino|Retrato masculino|figuras
+143|143-pinguim|Pinguim|animais
+144|144-queda-dagua|Queda d'água|paisagens
+145|145-rio-com-pedras|Rio com pedras|paisagens
