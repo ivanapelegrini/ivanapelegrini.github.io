@@ -60,10 +60,22 @@ do script. `ferramentas/tabela-precos.csv` tem a última tabela gerada.
 Em 21/10/2026 rodei com `--estimar`: 39 pinturas estão com tamanho estimado. Quando a vó medir,
 preencha `medidas` e rode o script de novo (ou ajuste o `preco` na mão).
 
-## Para publicar
+## Publicação
 
-É só subir a pasta inteira em qualquer hospedagem estática: GitHub Pages, Vercel, Netlify
-ou o mesmo Plesk do site da Ana. Depois de ter o domínio, troque o `og:image` no `index.html`
-pela URL completa (ex.: `https://dominio.com.br/img/og.jpg`) para o link ficar bonito no WhatsApp.
+O site está no ar em **https://ivanapelegrini.github.io**, pelo GitHub Pages, no repositório
+`ivanapelegrini/ivanapelegrini.github.io` (organização "ivanapelegrini", administrada pela conta miguel-aw).
 
-Links diretos funcionam: `#obra-072` abre o quadro 072 já ampliado.
+Para publicar uma mudança, basta commitar e enviar para a branch `main`:
+
+```bash
+git add -A
+git commit -m "o que mudou"
+git push
+```
+
+Em um ou dois minutos o GitHub Pages atualiza sozinho (não há build: é a pasta como está).
+
+Domínio próprio no futuro (ex.: ivanapelegrini.com.br): Settings → Pages → Custom domain no repositório,
+mais um registro CNAME no provedor do domínio apontando para `ivanapelegrini.github.io`.
+
+Links diretos funcionam: `https://ivanapelegrini.github.io/#obra-072` abre o quadro 072 já ampliado.
