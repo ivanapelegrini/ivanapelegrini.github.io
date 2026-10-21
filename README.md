@@ -48,17 +48,36 @@ A numeração (Nº 01, 02...) segue a ordem da lista, então um quadro novo entr
 Os preços ficam no campo `preco` de cada obra em `assets/obras.js` (número em reais, sem centavos).
 Vazio mostra "Preço sob consulta"; estudos nunca mostram preço. O campo `status` aceita `"acervo"`
 (acervo da artista, não está à venda) ou `"vendido"`: o site mostra a situação no lugar do preço e o
-script não dá preço a essas obras. A tabela de referência é o script
-`ferramentas/precos.py` (área em cm² × R$ 0,55 na pintura e R$ 0,30 no desenho, fator 1,3 para animais,
-figuras e retratos, + R$ 150 com moldura, mínimo R$ 500 para pintura e R$ 250 para desenho). Os números da regra ficam no topo
-do script. `ferramentas/tabela-precos.csv` tem a última tabela gerada.
+script não dá preço a essas obras.
+
+A tabela de referência é o script `ferramentas/precos.py`:
+
+    preço = (largura + altura em cm) × R$ 11 (pintura) ou R$ 6 (desenho)
+            × 1,2 se for animal, figura ou retrato
+            × 0,6 se a técnica disser "papel" (pintura em papel, não em tela)
+            + R$ 150 se a técnica disser "moldura"
+    mínimo R$ 400 (pintura) e R$ 250 (desenho)
+
+Os números ficam no topo do script. Ela foi calibrada em 21/10/2026 para ficar abaixo dos preços
+do Alexandre Reider (professor da Ivana: 15×20 cm por R$ 600–800, 20×30 por R$ 1.100) e do
+Douglas Okada (20×30 por R$ 600–650, 30×40 por R$ 1.000–1.300). Com ela a Ivana fica em
+15×20 → R$ 400, 20×30 → R$ 550, 30×40 → R$ 770.
 
 - Só com as obras que têm medidas: `python3 ferramentas/precos.py`
 - Incluindo as sem medidas (estima 45 cm no lado maior): `python3 ferramentas/precos.py --estimar`
 - Só ver a tabela, sem gravar: `python3 ferramentas/precos.py --tabela`
 
-Em 21/10/2026 rodei com `--estimar`: 39 pinturas estão com tamanho estimado. Quando a vó medir,
-preencha `medidas` e rode o script de novo (ou ajuste o `preco` na mão).
+`ferramentas/tabela-precos.csv` tem a última tabela gerada.
+
+### Quando a vó mandar as medidas
+
+Cole as linhas dela em `ferramentas/medidas.txt`, do jeito que vierem (número do quadro e medida;
+as palavras "papel", "tela" e "moldura" também são entendidas), e rode:
+
+    python3 ferramentas/aplicar-medidas.py
+
+Ele grava as medidas e a técnica em `assets/obras.js` e já recalcula os preços. Depois é só
+`git add -A && git commit -m "medidas" && git push`.
 
 ## Publicação
 

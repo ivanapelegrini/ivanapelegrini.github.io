@@ -1,0 +1,5 @@
+# Cole aqui as medidas que a vó mandar, uma obra por linha, e rode: python3 ferramentas/aplicar-medidas.py
+# Exemplos (apague estas linhas de exemplo):
+#   14 - 40x50
+#   Nº 22: 43 x 43 cm, tela, com moldura
+#   086 83 × 63 papel

@@ -3,36 +3,38 @@
 Calcula o preço sugerido de cada obra e grava em assets/obras.js (campo preco).
 
 Regra (ajuste os números abaixo e rode de novo):
-  preço = área (cm²) × taxa × fator de detalhe  + moldura   (mínimo por tipo)
-  - taxa: pintura R$ 0,55/cm², desenho R$ 0,30/cm²
-  - fator de detalhe 1,3 para animais, figuras e retratos (trabalho mais minucioso)
-  - moldura: + R$ 150 quando a técnica diz "com moldura"
+  preço = (largura + altura, em cm) × taxa por cm linear × fator de detalhe × fator de suporte + moldura
+  - taxa: pintura R$ 11 por cm linear, desenho R$ 6 por cm linear
+  - fator de detalhe 1,2 para animais, figuras e retratos (trabalho mais minucioso)
+  - fator de suporte 0,6 quando a técnica diz "papel" (pintura em papel, não em tela)
+  - moldura: + R$ 150 quando a técnica diz "moldura"
+  - mínimos: pintura R$ 400, desenho R$ 250
   - estudos (campo estudo preenchido) ficam sem preço
   - obras com status "acervo" ou "vendido" ficam sem preço (o site mostra a situação)
   - obras sem medidas: só recebem preço com --estimar (assume LADO_ESTIMADO cm no lado maior,
     e o outro lado pela proporção da foto). Preencha as medidas e rode de novo para corrigir.
 
+Referência usada em 21/10/2026 (preços de outros pintores, para a Ivana ficar abaixo):
+  Alexandre Reider: 15×20 cm R$ 600–800 | 20×25 R$ 1.000–1.100 | 20×30 R$ 1.100
+  Douglas Okada:    20×30 cm R$ 600–650  | 24×30 R$ 650        | 30×40 R$ 1.000–1.300
+  Com esta tabela a Ivana fica em: 15×20 → R$ 400 | 20×30 → R$ 550 | 30×40 → R$ 770
+
 Uso:  python3 ferramentas/precos.py            # só obras com medidas
       python3 ferramentas/precos.py --estimar  # também as sem medidas (estimativa)
       python3 ferramentas/precos.py --tabela   # só mostra a tabela, não grava
 """
-import re, sys, json, os, csv
+import re, sys, os, csv
 
-TAXA_PINTURA = 0.55     # R$ por cm²
-TAXA_DESENHO = 0.30     # R$ por cm²
-FATOR_DETALHE = 1.3     # animais, figuras e retratos
+TAXA_PINTURA = 11       # R$ por cm linear (largura + altura)
+TAXA_DESENHO = 6        # R$ por cm linear
+FATOR_DETALHE = 1.2     # animais, figuras e retratos
+FATOR_PAPEL = 0.6       # pintura em papel em vez de tela
 MOLDURA = 150           # R$ a mais quando tem moldura
-MIN_PINTURA = 500
+MIN_PINTURA = 400
 MIN_DESENHO = 250
 LADO_ESTIMADO = 45      # cm, lado maior, quando não há medidas (--estimar)
 TEMAS_DETALHE = {"animais", "figuras"}
 PALAVRAS_DETALHE = ("retrato", "moça", "bailarino", "anatomia", "gorila")
-
-raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-arq = os.path.join(raiz, "assets", "obras.js")
-estimar = "--estimar" in sys.argv
-so_tabela = "--tabela" in sys.argv
-texto = open(arq, encoding="utf-8").read()
 
 def campo(linha, nome, padrao=""):
     m = re.search(r'\b%s: "([^"]*)"' % nome, linha)
@@ -41,6 +43,24 @@ def campo(linha, nome, padrao=""):
 def arredonda(v):
     return int(round(v / 50.0) * 50) if v >= 1000 else int(round(v / 10.0) * 10)
 
+def calcula(a, b, tema, titulo, tecnica):
+    """Preço para uma obra de a × b cm. Usado também pelo --simular."""
+    desenho = tema == "desenhos"
+    taxa = TAXA_DESENHO if desenho else TAXA_PINTURA
+    fator = FATOR_DETALHE if (tema in TEMAS_DETALHE or any(p in titulo.lower() for p in PALAVRAS_DETALHE)) else 1.0
+    suporte = FATOR_PAPEL if (not desenho and "papel" in tecnica.lower()) else 1.0
+    valor = (a + b) * taxa * fator * suporte
+    valor = max(valor, MIN_DESENHO if desenho else MIN_PINTURA)
+    if "moldura" in tecnica.lower():
+        valor += MOLDURA
+    return arredonda(valor)
+
+raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+arq = os.path.join(raiz, "assets", "obras.js")
+estimar = "--estimar" in sys.argv
+so_tabela = "--tabela" in sys.argv
+texto = open(arq, encoding="utf-8").read()
+
 linhas_tabela = []
 def troca(m):
     linha = m.group(0)
@@ -48,7 +68,6 @@ def troca(m):
     tecnica, medidas, estudo = campo(linha, "tecnica"), campo(linha, "medidas"), campo(linha, "estudo")
     status = campo(linha, "status")
     w, h = (int(x) for x in re.search(r'\bw: (\d+), h: (\d+)', linha).groups())
-    desenho = tema == "desenhos"
     nums = [float(x) for x in re.findall(r'[\d.,]+', medidas.replace(",", "."))]
     origem = "medida"
     if len(nums) >= 2:
@@ -66,25 +85,18 @@ def troca(m):
     elif a is None:
         preco = ""; origem = "sem medidas"
     else:
-        area = a * b
-        taxa = TAXA_DESENHO if desenho else TAXA_PINTURA
-        fator = FATOR_DETALHE if (tema in TEMAS_DETALHE or any(p in titulo.lower() for p in PALAVRAS_DETALHE)) else 1.0
-        valor = area * taxa * fator
-        valor = max(valor, MIN_DESENHO if desenho else MIN_PINTURA)
-        if "moldura" in tecnica.lower():
-            valor += MOLDURA
-        preco = arredonda(valor)
-    linhas_tabela.append({"id": id_, "titulo": titulo, "tema": tema, "medidas": medidas or (f"~{a:.0f} × {b:.0f} cm" if a else ""), "origem": origem, "preco": preco})
+        preco = calcula(a, b, tema, titulo, tecnica)
+    linhas_tabela.append({"id": id_, "titulo": titulo, "tema": tema, "tecnica": tecnica, "medidas": medidas or (f"~{a:.0f} × {b:.0f} cm" if a else ""), "origem": origem, "preco": preco})
     novo = f'preco: {preco}' if preco != "" else 'preco: ""'
     return re.sub(r'\bpreco: (?:"[^"]*"|\d+)', novo, linha)
 
 novo_texto = re.sub(r'^    \{ id: "\d+".*\},$', troca, texto, flags=re.M)
 
-print(f'{"Nº":>3} {"id":>4}  {"título":<32} {"tema":<15} {"medidas":<16} {"origem":<12} {"preço":>9}')
+print(f'{"Nº":>3} {"id":>4}  {"título":<30} {"tema":<14} {"técnica":<22} {"medidas":<14} {"origem":<10} {"preço":>9}')
 total = 0
 for i, r in enumerate(linhas_tabela, start=1):
     p = f'R$ {r["preco"]:,}'.replace(",", ".") if r["preco"] != "" else "—"
-    print(f'{i:>3} {r["id"]:>4}  {r["titulo"][:32]:<32} {r["tema"]:<15} {r["medidas"]:<16} {r["origem"]:<12} {p:>9}')
+    print(f'{i:>3} {r["id"]:>4}  {r["titulo"][:30]:<30} {r["tema"]:<14} {r["tecnica"][:22]:<22} {r["medidas"]:<14} {r["origem"]:<10} {p:>9}')
     if r["preco"] != "": total += r["preco"]
 print(f"\nsoma de todas as obras com preço: R$ {total:,}".replace(",", "."))
 
@@ -92,7 +104,7 @@ if not so_tabela:
     open(arq, "w", encoding="utf-8").write(novo_texto)
     with open(os.path.join(raiz, "ferramentas", "tabela-precos.csv"), "w", encoding="utf-8", newline="") as f:
         wr = csv.writer(f, delimiter=";")
-        wr.writerow(["nº", "id", "título", "tema", "medidas", "origem", "preço (R$)"])
+        wr.writerow(["nº", "id", "título", "tema", "técnica", "medidas", "origem", "preço (R$)"])
         for i, r in enumerate(linhas_tabela, start=1):
-            wr.writerow([i, r["id"], r["titulo"], r["tema"], r["medidas"], r["origem"], r["preco"]])
+            wr.writerow([i, r["id"], r["titulo"], r["tema"], r["tecnica"], r["medidas"], r["origem"], r["preco"]])
     print("gravado em assets/obras.js e ferramentas/tabela-precos.csv")
