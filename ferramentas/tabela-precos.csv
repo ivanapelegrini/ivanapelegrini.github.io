@@ -1,12 +1,12 @@
 nº;id;título;tema;técnica;medidas;origem;preço (R$)
-1;072;Passeio a cavalo;figuras;Óleo em tecido sobre madeira, com moldura;82 × 101 cm;medida;2550
-2;073;Veleiros;paisagens;Óleo sobre tecido;49 × 36 cm;medida;940
-3;074;Serra com pinheiros;paisagens;Óleo sobre papel paraná;18 × 24 cm;medida;400
-4;075;Rancho na serra;paisagens;Óleo sobre papel paraná;21 × 25 cm;medida;400
-5;076;Casa na montanha;paisagens;Óleo sobre papel paraná;19 × 27 cm;medida;400
-6;077;Lago ao entardecer;paisagens;Óleo sobre papel paraná;19 × 24 cm;medida;400
-7;078;Casinha com ipês;paisagens;Óleo sobre papel paraná;19 × 23 cm;medida;400
-8;079;Lago e montanha;paisagens;Óleo sobre papel paraná;18 × 24 cm;medida;400
+1;072;Passeio a cavalo;figuras;Óleo em tecido sobre madeira, com moldura;82 × 101 cm;medida;1900
+2;073;Veleiro;paisagens;Óleo sobre tecido;49 × 36 cm;medida;940
+3;074;Serra com pinheiros;paisagens;Óleo sobre papel paraná;18 × 24 cm;medida;280
+4;075;Rancho na serra;paisagens;Óleo sobre papel paraná;21 × 25 cm;medida;300
+5;076;Casa na montanha;paisagens;Óleo sobre papel paraná;19 × 27 cm;medida;300
+6;077;Lago ao entardecer;paisagens;Óleo sobre papel paraná;19 × 24 cm;medida;280
+7;078;Casinha com ipês;paisagens;Óleo sobre papel paraná;19 × 23 cm;medida;280
+8;079;Lago e montanha;paisagens;Óleo sobre papel paraná;18 × 24 cm;medida;280
 9;080;Crânio com rosa;natureza-morta;Óleo sobre tecido;32 × 22 cm;medida;590
 10;081;Cogumelos;flores;Óleo sobre tela;30 × 50 cm;medida;880
 11;082;Coelhos;animais;Óleo sobre tela;50 × 90 cm;medida;1850
@@ -19,15 +19,15 @@ nº;id;título;tema;técnica;medidas;origem;preço (R$)
 18;089;Luz dourada;paisagens;Óleo sobre tela;50 × 40 cm;medida;990
 19;090;Rei das Selvas;animais;Óleo sobre painel;40 × 40 cm;medida;1050
 20;091;Lago alpino;paisagens;Óleo sobre tela;50 × 40 cm;medida;990
-21;092;Sol sobre o lago;paisagens;Óleo sobre tela;15 × 15 cm;medida;400
+21;092;Sol sobre o lago;paisagens;Óleo sobre tela;15 × 15 cm;medida;330
 22;093;Rosa vermelha;flores;Óleo sobre painel;40 × 40 cm;medida;880
 23;094;Pera;natureza-morta;Óleo sobre tela;20 × 20 cm;medida;440
 24;095;Carpas;animais;Óleo sobre tela;24 × 18 cm;medida;550
 25;096;Galinha e pintinhos;animais;Óleo sobre tela;18 × 24 cm;medida;550
-26;097;Borboleta;animais;Óleo sobre tela;10 × 15 cm;medida;400
+26;097;Borboleta;animais;Óleo sobre tela;10 × 15 cm;medida;330
 27;098;Vaca no pasto;animais;Óleo sobre tela;16 × 22 cm;medida;500
 28;099;Patinhos;animais;Óleo sobre tela;16 × 22 cm;medida;500
-29;100;Zínias;flores;Óleo sobre tela;15 × 10 cm;medida;400
+29;100;Zínias;flores;Óleo sobre tela;15 × 10 cm;medida;280
 30;101;Abóbora e leiteira;natureza-morta;Óleo em tecido sobre madeira;25 × 30 cm;medida;600
 31;102;Labrador;animais;Óleo em tecido sobre madeira;30 × 23 cm;medida;700
 32;103;Toscana;paisagens;Óleo em tecido sobre madeira;29 × 37 cm;medida;730
@@ -40,16 +40,16 @@ nº;id;título;tema;técnica;medidas;origem;preço (R$)
 39;110;Gavião-real;animais;Óleo sobre tela;30 × 20 cm;medida;660
 40;111;Pasto com ipês;paisagens;Óleo sobre tela;30 × 24 cm;medida;590
 41;112;Paineira vermelha;flores;Óleo sobre painel;30 × 80 cm;medida;1200
-42;113;Antúrio e abelha;flores;Óleo sobre tela;10 × 15 cm;medida;400
+42;113;Antúrio e abelha;flores;Óleo sobre tela;10 × 15 cm;medida;280
 43;114;Suculentas;flores;Óleo sobre painel;40 × 60 cm;medida;1100
 44;115;Buquê de rosas;flores;Óleo em tecido sobre madeira;50 × 31 cm;medida;890
 45;116;Vale;paisagens;Óleo em tecido sobre madeira;29 × 58 cm;medida;960
 46;117;Retrato de homem;figuras;Óleo sobre tela;50 × 40 cm;estudo;
 47;118;Menina;figuras;Óleo sobre tela, com moldura;40 × 30 cm;estudo;
 48;119;Reflexos;paisagens;Óleo sobre papel Sinoart, com moldura;40 × 30 cm;medida;610
-49;120;Borboleta nas flores;animais;Óleo sobre tela;15 × 10 cm;medida;400
+49;120;Borboleta nas flores;animais;Óleo sobre tela;15 × 10 cm;medida;330
 50;121;Patos no píer;animais;Óleo em tecido sobre madeira;24 × 41 cm;medida;860
-51;122;Abóbora;flores;Óleo sobre tela;15 × 15 cm;medida;400
+51;122;Abóbora;flores;Óleo sobre tela;15 × 15 cm;medida;330
 52;123;Orquídeas;flores;Óleo sobre painel;30 × 30 cm;medida;660
 53;124;Mini margarida;flores;Óleo sobre painel;30 × 30 cm;medida;660
 54;125;Gato;animais;Óleo sobre tela;30 × 30 cm;medida;790
@@ -69,7 +69,7 @@ nº;id;título;tema;técnica;medidas;origem;preço (R$)
 68;139;Retrato masculino a carvão;desenhos;Desenho a carvão;34 × 23 cm;medida;410
 69;140;Retrato feminino em pastel;desenhos;Desenho em pastel;34 × 23 cm;medida;410
 70;141;Retrato de índio em pastel;desenhos;Desenho em pastel;45 × 32 cm;medida;550
-71;142;Retrato masculino;figuras;Óleo sobre papel;24 × 19 cm;medida;400
+71;142;Retrato masculino;figuras;Óleo sobre papel;24 × 19 cm;medida;340
 72;143;Pinguim;animais;;27 × 33 cm;vendido;
 73;144;Queda d'água;paisagens;Sobre MDF telado, com moldura;34 × 27 cm;vendido;
 74;145;Rio com pedras;paisagens;;32 × 42 cm;vendido;

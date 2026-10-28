@@ -56,12 +56,12 @@ A tabela de referência é o script `ferramentas/precos.py`:
             × 1,2 se for animal, figura ou retrato
             × 0,6 se a técnica disser "papel" (pintura em papel, não em tela)
             + R$ 150 se a técnica disser "moldura"
-    mínimo R$ 400 (pintura) e R$ 250 (desenho)
+    sem mínimo; teto de R$ 1.900 nas pinturas
 
 Os números ficam no topo do script. Ela foi calibrada em 21/10/2026 para ficar abaixo dos preços
 do Alexandre Reider (professor da Ivana: 15×20 cm por R$ 600–800, 20×30 por R$ 1.100) e do
 Douglas Okada (20×30 por R$ 600–650, 30×40 por R$ 1.000–1.300). Com ela a Ivana fica em
-15×20 → R$ 400, 20×30 → R$ 550, 30×40 → R$ 770.
+15×20 → R$ 390, 20×30 → R$ 550, 30×40 → R$ 770.
 
 - Só com as obras que têm medidas: `python3 ferramentas/precos.py`
 - Incluindo as sem medidas (estima 45 cm no lado maior): `python3 ferramentas/precos.py --estimar`

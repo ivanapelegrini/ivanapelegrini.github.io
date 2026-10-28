@@ -8,7 +8,7 @@ Regra (ajuste os números abaixo e rode de novo):
   - fator de detalhe 1,2 para animais, figuras e retratos (trabalho mais minucioso)
   - fator de suporte 0,6 quando a técnica diz "papel" (pintura em papel, não em tela)
   - moldura: + R$ 150 quando a técnica diz "moldura"
-  - mínimos: pintura R$ 400, desenho R$ 250
+  - sem mínimo; teto de R$ 1.900 nas pinturas (quadro mais caro das referências)
   - estudos (campo estudo preenchido) ficam sem preço
   - obras com status "acervo" ou "vendido" ficam sem preço (o site mostra a situação)
   - obras sem medidas: só recebem preço com --estimar (assume LADO_ESTIMADO cm no lado maior,
@@ -17,7 +17,7 @@ Regra (ajuste os números abaixo e rode de novo):
 Referência usada em 21/10/2026 (preços de outros pintores, para a Ivana ficar abaixo):
   Alexandre Reider: 15×20 cm R$ 600–800 | 20×25 R$ 1.000–1.100 | 20×30 R$ 1.100
   Douglas Okada:    20×30 cm R$ 600–650  | 24×30 R$ 650        | 30×40 R$ 1.000–1.300
-  Com esta tabela a Ivana fica em: 15×20 → R$ 400 | 20×30 → R$ 550 | 30×40 → R$ 770
+  Com esta tabela a Ivana fica em: 15×20 → R$ 390 | 20×30 → R$ 550 | 30×40 → R$ 770
 
 Uso:  python3 ferramentas/precos.py            # só obras com medidas
       python3 ferramentas/precos.py --estimar  # também as sem medidas (estimativa)
@@ -30,8 +30,9 @@ TAXA_DESENHO = 6        # R$ por cm linear
 FATOR_DETALHE = 1.2     # animais, figuras e retratos
 FATOR_PAPEL = 0.6       # pintura em papel em vez de tela
 MOLDURA = 150           # R$ a mais quando tem moldura
-MIN_PINTURA = 400
-MIN_DESENHO = 250
+MIN_PINTURA = 0         # sem mínimo: o preço é só proporcional ao tamanho
+MIN_DESENHO = 0
+TETO_PINTURA = 1900     # teto: nenhuma pintura passa do quadro mais caro das referências
 LADO_ESTIMADO = 45      # cm, lado maior, quando não há medidas (--estimar)
 TEMAS_DETALHE = {"animais", "figuras"}
 PALAVRAS_DETALHE = ("retrato", "moça", "bailarino", "anatomia", "gorila")
@@ -53,6 +54,8 @@ def calcula(a, b, tema, titulo, tecnica):
     valor = max(valor, MIN_DESENHO if desenho else MIN_PINTURA)
     if "moldura" in tecnica.lower():
         valor += MOLDURA
+    if not desenho and TETO_PINTURA:
+        valor = min(valor, TETO_PINTURA)
     return arredonda(valor)
 
 raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
