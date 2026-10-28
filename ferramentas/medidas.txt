@@ -1,5 +1,64 @@
-# Cole aqui as medidas que a vó mandar, uma obra por linha, e rode: python3 ferramentas/aplicar-medidas.py
-# Exemplos (apague estas linhas de exemplo):
-#   14 - 40x50
-#   Nº 22: 43 x 43 cm, tela, com moldura
-#   086 83 × 63 papel
+# Medidas enviadas pela vó em 22/10/2026 (altura x largura). Aplicadas com: python3 ferramentas/aplicar-medidas.py
+01 - 82x101cm óleo em tecido s/madeira c/moldura
+02 - 49x36 cm óleo s/tecido
+03 - 18x24cm óleo s/papel paraná
+04 - 21x25cm óleo s/papel paraná
+05 - 19x27cm óleo s/papel paraná
+06 - 19x24cm óleo s/papel paraná
+07 - 19x23cm óleo s/papel paraná
+08 - 18x24cm óleo s/papel paraná
+09 - 32x22cm óleo s/tecido
+10 - 30x50cm óleo s/tela
+11 - 50x90cm óleo s/tela
+12 - 39x72cm óleo em tecido s/madeira
+13 - 63x52cm óleo s/tecido
+14 - 50x50cm óleo s/tela
+15 - 60x80cm óleo s/tela
+16 - 40x60cm óleo s/painel
+17 - 62x41cm óleo em tecido sobre madeira
+18 - 50x40cm óleo s/tela
+19 - 40x40cm óleo s/painel
+20 - 50x40cm óleo s/tela
+21 - 15x15cm óleo s/tela
+22 - 40x40cm óleos/painel
+23 - 20x20cm óleo s/tela
+24 - 24x18cm óleo s/tela
+25 - 18x24cm óleo s/tela
+26 - 10x15cm óleo s/tela
+27 - 16x22cm óleo s/tela
+28 - 16x22cm óleo s/tela
+29 - 15x10cm óleo s/tela
+30 - 25x30cm óleo em tecido s/madeira
+31 - 30x23cm óleo em tecido s/madeira
+32 - 29x37cm óleo em tecido s/madeira
+33 - 30x40cm óleo em tecido s/madeira
+34 - 25x35cm óleo s/tela
+35 - 24x30cm óleo s/tela
+36 - 24x30cm óleo s/tela
+37 - 24x30cm óleo s/tela
+38 - 20x30cm óleo s/tela
+39 - 30x20cm óleo s/tela
+40 - 30x24cm óleo s/tela
+41 - 30x80cm óleo s/painel
+42 - 10x15cm óleo s/tela
+43 - 40x60cm óleo s/painel
+44 - 50x31cm óleo em tecido s/madeira
+45 - 29x58cm óleo em tecido s/madeira
+46 - 50x40cm óleo s/tela
+47 - 40x30cm óleo sobre tela c/ moldura
+48 - 40x30cm óleo s/papel Sinoart c/moldura
+49 - 15x10cm óleo s/tela
+50 - 24x41cm óleo em tecido s/madeira
+51 - 15x15cm óleo s/tela
+52 - 30x30cm óleo s/painel
+53 - 30x30cm óleo s/painel
+54 - 30x30cm óleo s/tela
+55 - 20x60cm óleo s/painel
+56 - 30x40cm óleo em tecido s/madeira com moldura
+57 - 25x25cm óleo s/tela
+58 - 35x25cm óleo s/tela
+59 - 25x25cm óleo s/tela
+71 - 24x19cm óleo s/papel
+72 - vendido
+73 - vendido
+16 - acervo
